@@ -4,8 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
         <title>Canned Kitty!</title>
-        <script src="//cdn.jsdelivr.net/phaser/2.8.3/phaser.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy" />
+        <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
         <style media="screen" type="text/css">
 
             body {
@@ -55,16 +54,18 @@
 
         function preload () {
 
+            game.load.baseURL = '/assets/games/canned-kitty/';
+
             game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
 
-            game.load.image('background', 'images/wall-667x375.png');
-            game.load.image('trashcan1', 'images/trashcan1-140x200.png')
-            game.load.image('trashcan2', 'images/trashcan2-140x200.png')
+            game.load.image('background', 'img/wall-667x375.png');
+            game.load.image('trashcan1', 'img/trashcan1-140x200.png')
+            game.load.image('trashcan2', 'img/trashcan2-140x200.png')
 
-            game.load.image('trashbag1', 'images/trashbag1-122x150.png')
-            game.load.image('trashbag2', 'images/trashbag2-122x150.png')
+            game.load.image('trashbag1', 'img/trashbag1-122x150.png')
+            game.load.image('trashbag2', 'img/trashbag2-122x150.png')
 
-            game.load.image('cat', 'images/cat2.png');
+            game.load.image('cat', 'img/kitty.png');
 
             game.load.audio('meow_a', 'wav/meow_a5.wav');
             game.load.audio('meow_b', 'wav/meow_b5.wav');
@@ -78,9 +79,6 @@
         function create () {
 
             game.stage.backgroundColor = '#000';
-
-            // game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
-
 
             meows = [
                 game.add.audio('meow_a'), // 0
@@ -169,7 +167,6 @@
 
             foreground_group = game.add.group();
 
-
             var trash = [
                 foreground_group.create(100, 155, 'trashcan1'),
                 foreground_group.create(20, 225, 'trashbag2'),
@@ -177,9 +174,6 @@
                 foreground_group.create(250, 170, 'trashcan2'),
                 foreground_group.create(480, 165, 'trashcan1'),
             ];
-
-            //trashcan.anchor.setTo(0, 0);
-
 
             create_cat();
 
@@ -208,14 +202,6 @@
         }
 
         function render() {
-            // game.debug.text(window.innerWidth, 0, 100, 'black');
-            // game.debug.text(window.innerHeight, 0, 120, 'black');
-            // game.debug.text(window.devicePixelRatio, 0, 140, 'black');
-
-            //window.innerWidth * window.devicePixelRatio,
-            //window.innerHeight * window.devicePixelRatio,
-
-            //game.debug.pointer(game.input.pointer1);
         }
 
         function create_cat() {
@@ -227,7 +213,6 @@
             cat.inputEnabled = true;
 
             game.add.tween(cat).to( path.to, 4000, Phaser.Easing.Elastic.Out, true);
-
 
             cat.events.onInputDown.add(
                 function() {

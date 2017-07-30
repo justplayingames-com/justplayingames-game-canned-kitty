@@ -12,5 +12,5 @@
 */
 
 Route::get('/games/canned-kitty', function() {
-	view('justplayingames-game-canned-kitty::game');
+    return view('justplayingames-game-canned-kitty::game');
 });

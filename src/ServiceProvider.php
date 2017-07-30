@@ -16,8 +16,13 @@ class ServiceProvider extends BaseServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'justplayingames-game-canned-kitty');
 
         $this->publishes([
-            __DIR__.'/path/to/views' => resource_path('views/vendor/justplayingames-game-canned-kitty'),
-        ]);
+            __DIR__.'/../resources/views' => resource_path('views/vendor/justplayingames-game-canned-kitty'),
+        ], 'views');
+
+        /* assets */
+        $this->publishes([
+            __DIR__.'/../public' => resource_path('public/assets/games/canned-kitty'),
+        ], 'assets');
     }
 
     /**
