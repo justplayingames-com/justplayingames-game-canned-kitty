@@ -1,0 +1,17 @@
+{
+    "name": "justplayingames/game-canned-kitty",
+    "description": "Canned Kitty game on justplayingames.com",
+    "keywords": ["game", "justplayingames", "laravel"],
+    "license": "BSD 3-clause",
+    "authors": [
+        {
+            "name": "Just Playin",
+            "email": "jp@justplayingames.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JustPlayinGames\\Games\\CannedKitty": "src/"
+        }
+    }
+}
