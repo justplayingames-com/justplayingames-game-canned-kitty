@@ -21,8 +21,8 @@ class ServiceProvider extends BaseServiceProvider
 
         /* assets */
         $this->publishes([
-            __DIR__.'/../public' => resource_path('public/assets/games/canned-kitty'),
-        ], 'assets');
+            __DIR__.'/../public' => public_path('assets/games/canned-kitty'),
+        ], 'public');
     }
 
     /**
