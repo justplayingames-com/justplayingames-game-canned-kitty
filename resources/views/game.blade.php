@@ -67,13 +67,13 @@
 
             game.load.image('cat', 'img/kitty.png');
 
-            game.load.audio('meow_a', 'wav/meow_a5.wav');
-            game.load.audio('meow_b', 'wav/meow_b5.wav');
-            game.load.audio('meow_c', 'wav/meow_c5.wav');
-            game.load.audio('meow_d', 'wav/meow_d5.wav');
-            game.load.audio('meow_e', 'wav/meow_e5.wav');
-            game.load.audio('meow_f', 'wav/meow_f5.wav');
-            game.load.audio('meow_g', 'wav/meow_g5.wav');
+            game.load.audio('meow_a', 'wav/meow_A5.wav');
+            game.load.audio('meow_b', 'wav/meow_B5.wav');
+            game.load.audio('meow_c', 'wav/meow_C5.wav');
+            game.load.audio('meow_d', 'wav/meow_E5.wav');
+            game.load.audio('meow_e', 'wav/meow_E5.wav');
+            game.load.audio('meow_f', 'wav/meow_F5.wav');
+            game.load.audio('meow_g', 'wav/meow_G5.wav');
         }
 
         function create () {
